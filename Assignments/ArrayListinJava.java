@@ -13,6 +13,7 @@ public class ArrayListinJava
 		Names.add("Birram");
 		Names.add("Sai");
 		System.out.println(Names);
+		System.out.println(Names.subList(0, 2));
 		//Adding elements in a specified position
 		Names.add(3, "Asupaka");
 		System.out.println("After Adding Element: "+Names);

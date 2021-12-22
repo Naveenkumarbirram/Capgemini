@@ -1,4 +1,4 @@
-package PracticeAssessments;
+package collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,48 +23,48 @@ class Employee implements Comparable<Employee>
 		this.address = address;
 		this.salary = salary;
  	}
-    public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public int getSalary() {
-		return salary;
-	}
-
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
+//    public int getId() {
+//		return id;
+//	}
+//
+//	public void setId(int id) {
+//		this.id = id;
+//	}
+//
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//
+//	public String getAddress() {
+//		return address;
+//	}
+//
+//	public void setAddress(String address) {
+//		this.address = address;
+//	}
+//
+//	public int getSalary() {
+//		return salary;
+//	}
+//
+//	public void setSalary(int salary) {
+//		this.salary = salary;
+//	}
     @Override
 	public String toString() {
 		return "Employee = [id=" + id + ", name=" + name + ", address=" + address + ", salary=" + salary + "]";
 	}
     public int compareTo(Employee o1) {
 
-        Employee e = (Employee)o1;
-        int SalComaprison = Integer.compare(this.salary, e.salary);
+        //Employee e = (Employee)o1;
+        int SalComaprison = Integer.compare(this.salary, o1.salary);
         if (SalComaprison == 0)
         {
-            return name.compareTo(e.name);
+            return name.compareTo(o1.name);
         }
         return SalComaprison;
 
