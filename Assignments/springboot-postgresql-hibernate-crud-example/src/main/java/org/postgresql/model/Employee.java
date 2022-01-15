@@ -1,0 +1,69 @@
+package org.postgresql.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="employee")
+public class Employee 
+{
+	//To make a primary key we will use 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name="First_name")
+	private String first_name;
+
+	@Column(name="Last_name")
+	private String last_name;
+
+	@Column(name="Email")
+	private  String email;
+
+	//Parameterized Constructor
+	public Employee(int id, String first_name, String last_name, String email) {
+		super();
+		this.id = id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.email = email;
+	}
+
+	//No-arg constructor
+	public Employee() {
+		super();
+	}
+
+	//Getter and setter methods
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getFirst_name() {
+		return first_name;
+	}
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+	public String getLast_name() {
+		return last_name;
+	}
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+}
